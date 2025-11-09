@@ -1,6 +1,6 @@
 Hi, I'm Mert Efe Kurt 👋  
 I'm a **Software Developer** passionate about building efficient, secure, and data-driven systems.  
-🎓 Management and Information Systems (YBS) student.  
+🎓 Management and Information Systems (MIS) student.  
 🛡️ I love exploring the intersection of **data, security, and automation.**
 
 Previously worked on:
@@ -31,3 +31,7 @@ Previously worked on:
 ---
 
 > _“Code is art, but secure code is craftsmanship.”_
+
+### 🧠 Recent Repositories
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
