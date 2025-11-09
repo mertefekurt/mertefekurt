@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -36,7 +38,12 @@ jobs:
           token = os.environ.get('GITHUB_TOKEN')
           username = 'mertefekurt'
           
-          headers = {'Authorization': f'token {token}'} if token else {}
+          if not token:
+              print("Warning: GITHUB_TOKEN not found, using unauthenticated requests")
+              headers = {}
+          else:
+              headers = {'Authorization': f'Bearer {token}'}
+          
           url = f'https://api.github.com/users/{username}/repos?sort=updated&per_page=6&type=all'
           
           try:
@@ -68,9 +75,17 @@ jobs:
               with open('README.md', 'w', encoding='utf-8') as f:
                   f.write(new_content)
               
-              print(f"Updated README with {len(repo_list)} repositories")
+              print(f"✅ Updated README with {len(repo_list)} repositories")
+              for repo in repo_list:
+                  print(f"  {repo}")
+          except requests.exceptions.HTTPError as e:
+              print(f"❌ HTTP Error: {e}")
+              print(f"Response: {e.response.text}")
+              sys.exit(1)
           except Exception as e:
-              print(f"Error: {e}")
+              print(f"❌ Error: {e}")
+              import traceback
+              traceback.print_exc()
               sys.exit(1)
           EOF
 
@@ -78,5 +93,12 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git diff --quiet && git diff --staged --quiet || (git add README.md && git commit -m "chore: update recent repositories [skip ci]" && git push)
+          if ! git diff --quiet README.md || ! git diff --cached --quiet README.md; then
+            git add README.md
+            git commit -m "chore: update recent repositories [skip ci]"
+            git push
+            echo "✅ Changes pushed successfully"
+          else
+            echo "ℹ️ No changes to commit"
+          fi
 
