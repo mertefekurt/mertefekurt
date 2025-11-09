@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
+    inputs:
+      trigger:
+        description: 'Manual trigger'
+        required: false
+        default: 'manual'
 
 jobs:
   update-readme:
