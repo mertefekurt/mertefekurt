@@ -20,6 +20,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: pip install requests
+
       - name: Update README with recent repositories
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -28,6 +31,7 @@ jobs:
           import os
           import re
           import requests
+          import sys
           
           token = os.environ.get('GITHUB_TOKEN')
           username = 'mertefekurt'
@@ -35,28 +39,39 @@ jobs:
           headers = {'Authorization': f'token {token}'} if token else {}
           url = f'https://api.github.com/users/{username}/repos?sort=updated&per_page=6&type=all'
           
-          response = requests.get(url, headers=headers)
-          repos = response.json()
-          
-          repo_list = []
-          for repo in repos:
-            name = repo.get('name', '')
-            description = repo.get('description', 'No description')
-            url = repo.get('html_url', '')
-            language = repo.get('language', '')
-            language_badge = f" `{language}`" if language else ""
-            repo_list.append(f"- **[{name}]({url})**{language_badge} - {description}")
-          
-          with open('README.md', 'r') as f:
-            content = f.read()
-          
-          pattern = r'<!--START_SECTION:activity-->.*?<!--END_SECTION:activity-->'
-          replacement = f'<!--START_SECTION:activity-->\n' + '\n'.join(repo_list) + '\n<!--END_SECTION:activity-->'
-          
-          new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-          
-          with open('README.md', 'w') as f:
-            f.write(new_content)
+          try:
+              response = requests.get(url, headers=headers, timeout=10)
+              response.raise_for_status()
+              repos = response.json()
+              
+              if not repos:
+                  print("No repositories found")
+                  sys.exit(0)
+              
+              repo_list = []
+              for repo in repos:
+                  name = repo.get('name', '')
+                  description = repo.get('description', 'No description')
+                  repo_url = repo.get('html_url', '')
+                  language = repo.get('language', '')
+                  language_badge = f" `{language}`" if language else ""
+                  repo_list.append(f"- **[{name}]({repo_url})**{language_badge} - {description}")
+              
+              with open('README.md', 'r', encoding='utf-8') as f:
+                  content = f.read()
+              
+              pattern = r'<!--START_SECTION:activity-->.*?<!--END_SECTION:activity-->'
+              replacement = f'<!--START_SECTION:activity-->\n' + '\n'.join(repo_list) + '\n<!--END_SECTION:activity-->'
+              
+              new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+              
+              with open('README.md', 'w', encoding='utf-8') as f:
+                  f.write(new_content)
+              
+              print(f"Updated README with {len(repo_list)} repositories")
+          except Exception as e:
+              print(f"Error: {e}")
+              sys.exit(1)
           EOF
 
       - name: Commit and push changes
