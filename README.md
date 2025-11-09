@@ -56,6 +56,12 @@ Small but powerful tools that streamline everyday development tasks, making work
 ## 🧠 Recent Repositories
 
 <!--START_SECTION:activity-->
+- **[mertefekurt](https://github.com/mertefekurt/mertefekurt)** - My Profile ReadME
+- **[portfolio](https://github.com/mertefekurt/portfolio)** `CSS` - None
+- **[JavaLearn](https://github.com/mertefekurt/JavaLearn)** `Java` - None
+- **[PyUUID](https://github.com/mertefekurt/PyUUID)** `Python` - None
+- **[OOPLesson](https://github.com/mertefekurt/OOPLesson)** `Java` - None
+- **[DeckTop100](https://github.com/mertefekurt/DeckTop100)** `Python` - None
 <!--END_SECTION:activity-->
 
 ---
