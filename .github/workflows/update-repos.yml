@@ -1,0 +1,67 @@
+name: Update Recent Repositories
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Update README with recent repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 << 'EOF'
+          import os
+          import re
+          import requests
+          
+          token = os.environ.get('GITHUB_TOKEN')
+          username = 'mertefekurt'
+          
+          headers = {'Authorization': f'token {token}'} if token else {}
+          url = f'https://api.github.com/users/{username}/repos?sort=updated&per_page=6&type=all'
+          
+          response = requests.get(url, headers=headers)
+          repos = response.json()
+          
+          repo_list = []
+          for repo in repos:
+            name = repo.get('name', '')
+            description = repo.get('description', 'No description')
+            url = repo.get('html_url', '')
+            language = repo.get('language', '')
+            language_badge = f" `{language}`" if language else ""
+            repo_list.append(f"- **[{name}]({url})**{language_badge} - {description}")
+          
+          with open('README.md', 'r') as f:
+            content = f.read()
+          
+          pattern = r'<!--START_SECTION:activity-->.*?<!--END_SECTION:activity-->'
+          replacement = f'<!--START_SECTION:activity-->\n' + '\n'.join(repo_list) + '\n<!--END_SECTION:activity-->'
+          
+          new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+          
+          with open('README.md', 'w') as f:
+            f.write(new_content)
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git diff --quiet && git diff --staged --quiet || (git add README.md && git commit -m "chore: update recent repositories [skip ci]" && git push)
+
