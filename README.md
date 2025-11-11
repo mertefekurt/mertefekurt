@@ -56,10 +56,10 @@ Small but powerful tools that streamline everyday development tasks, making work
 ## 🧠 Recent Repositories
 
 <!--START_SECTION:activity-->
-- **[TechnopatGrabber](https://github.com/mertefekurt/TechnopatGrabber)** `Python` - Technopat Grabber
-- **[mertefekurt](https://github.com/mertefekurt/mertefekurt)** - My Profile ReadME
-- **[portfolio](https://github.com/mertefekurt/portfolio)** `CSS` - None
 - **[JavaLearn](https://github.com/mertefekurt/JavaLearn)** `Java` - None
+- **[mertefekurt](https://github.com/mertefekurt/mertefekurt)** - My Profile ReadME
+- **[TechnopatGrabber](https://github.com/mertefekurt/TechnopatGrabber)** `Python` - Technopat Grabber
+- **[portfolio](https://github.com/mertefekurt/portfolio)** `CSS` - None
 - **[PyUUID](https://github.com/mertefekurt/PyUUID)** `Python` - None
 - **[OOPLesson](https://github.com/mertefekurt/OOPLesson)** `Java` - None
 <!--END_SECTION:activity-->
