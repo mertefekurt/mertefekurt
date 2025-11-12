@@ -2,7 +2,7 @@
 
 I'm a **Software Developer** passionate about building efficient, secure, and data-driven systems. Currently pursuing a degree in **Management and Information Systems (MIS)** while exploring the intersection of **data, security, and automation**.
 
-## 🚀 About Me
+## 💫 About Me
 
 - 🎓 **Student** at Management and Information Systems
 - 💻 **Software Developer** focused on clean, maintainable code
