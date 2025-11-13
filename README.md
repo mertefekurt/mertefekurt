@@ -35,6 +35,14 @@ I'm a **Software Developer** passionate about building efficient, secure, and da
 | ![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=mertefekurt&theme=dracula) | ![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=mertefekurt&theme=dracula) | ![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=mertefekurt&theme=dracula) |
 |:-----:|:------:|:------:|
 
+## 🐍 Contribution Snake
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mertefekurt/mertefekurt/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mertefekurt/mertefekurt/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/mertefekurt/mertefekurt/output/github-contribution-grid-snake.svg">
+</picture>
+
 ## 🧩 Featured Projects
 
 ### Data Cleaning & Analysis Pipelines
