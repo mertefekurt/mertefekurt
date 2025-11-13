@@ -28,11 +28,33 @@ jobs:
             output/github-contribution-grid-snake.svg
             output/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      - name: Check generated files
+        run: |
+          echo "Checking output directory..."
+          ls -la output/ || echo "Output directory not found"
+          if [ -f "output/github-contribution-grid-snake.svg" ]; then
+            echo "✅ Light snake file exists"
+          else
+            echo "❌ Light snake file not found"
+          fi
+          if [ -f "output/github-contribution-grid-snake-dark.svg" ]; then
+            echo "✅ Dark snake file exists"
+          else
+            echo "❌ Dark snake file not found"
+          fi
+
       - name: Push to repository
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output/
-          git commit -m "chore: update contribution snake [skip ci]" || exit 0
-          git push
+          git config --local --add safe.directory /github/workspace
+          if [ -d "output" ] && [ "$(ls -A output)" ]; then
+            git add output/
+            git commit -m "chore: update contribution snake [skip ci]" || exit 0
+            git push
+            echo "✅ Snake files pushed successfully"
+          else
+            echo "❌ No output files to commit"
+            exit 1
+          fi
 
