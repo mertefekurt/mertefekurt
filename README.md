@@ -65,11 +65,11 @@ Small but powerful tools that streamline everyday development tasks, making work
 
 <!--START_SECTION:activity-->
 - **[mertefekurt](https://github.com/mertefekurt/mertefekurt)** - My Profile ReadME
-- **[CMPE312-PROJECT](https://github.com/mertefekurt/CMPE312-PROJECT)** - None
 - **[JavaLearn](https://github.com/mertefekurt/JavaLearn)** `Java` - None
 - **[JWT](https://github.com/mertefekurt/JWT)** `Python` - None
 - **[Roulette-Game-CLI](https://github.com/mertefekurt/Roulette-Game-CLI)** `Python` - A simple command-line roulette game built with Python
 - **[PyUUID](https://github.com/mertefekurt/PyUUID)** `Python` - None
+- **[FAPI](https://github.com/mertefekurt/FAPI)** `Python` - None
 <!--END_SECTION:activity-->
 
 ---
