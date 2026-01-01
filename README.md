@@ -2,7 +2,7 @@
 
 I'm a **Software Developer** passionate about building efficient, secure, and data-driven systems. Currently pursuing a degree in **Management and Information Systems (MIS)** while exploring the intersection of **data, security, and automation**.
 
-## 💫 About Me
+## About Me
 
 - 🎓 **Student** at Management and Information Systems
 - 💻 **Software Developer** focused on clean, maintainable code
@@ -35,7 +35,7 @@ I'm a **Software Developer** passionate about building efficient, secure, and da
 | ![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=mertefekurt&theme=dracula) | ![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=mertefekurt&theme=dracula) | ![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=mertefekurt&theme=dracula) |
 |:-----:|:------:|:------:|
 
-## 🐍 Contribution Snake
+##  Contribution History
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mertefekurt/mertefekurt/main/output/github-contribution-grid-snake-dark.svg">
@@ -61,7 +61,7 @@ Small but powerful tools that streamline everyday development tasks, making work
 
 ---
 
-## 🧠 Recent Repositories
+##  Recent Repositories
 
 <!--START_SECTION:activity-->
 - **[mertefekurt](https://github.com/mertefekurt/mertefekurt)** - My Profile ReadME
