@@ -65,11 +65,11 @@ Small but powerful tools that streamline everyday development tasks, making work
 
 <!--START_SECTION:activity-->
 - **[mertefekurt](https://github.com/mertefekurt/mertefekurt)** - My Profile ReadME
-- **[MIS029-Chocolate-Dashboard](https://github.com/mertefekurt/MIS029-Chocolate-Dashboard)** `HTML` - MIS029 Data Visualization Final Project - Chocolate Bar Ratings Analysis Dashboard
-- **[JavaLearn](https://github.com/mertefekurt/JavaLearn)** `Java` - None
-- **[JWT](https://github.com/mertefekurt/JWT)** `Python` - None
-- **[Roulette-Game-CLI](https://github.com/mertefekurt/Roulette-Game-CLI)** `Python` - A simple command-line roulette game built with Python
-- **[PyUUID](https://github.com/mertefekurt/PyUUID)** `Python` - None
+- **[Story-Generator](https://github.com/mertefekurt/Story-Generator)** `Python` - AI Powered Story Generator
+- **[Memu-AI](https://github.com/mertefekurt/Memu-AI)** `Swift` - memu, yapay zeka destekli bir sohbet uygulaması.
+- **[cron-window-audit](https://github.com/mertefekurt/cron-window-audit)** `Python` - None
+- **[cache-header-audit](https://github.com/mertefekurt/cache-header-audit)** `Python` - None
+- **[env-drift-guard](https://github.com/mertefekurt/env-drift-guard)** `Python` - None
 <!--END_SECTION:activity-->
 
 ---
