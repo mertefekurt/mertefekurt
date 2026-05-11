@@ -65,11 +65,11 @@ Small but powerful tools that streamline everyday development tasks, making work
 
 <!--START_SECTION:activity-->
 - **[mertefekurt](https://github.com/mertefekurt/mertefekurt)** - My Profile ReadME
+- **[DeckTop100](https://github.com/mertefekurt/DeckTop100)** `Python` - None
+- **[log-latency-profiler](https://github.com/mertefekurt/log-latency-profiler)** `Python` - None
+- **[pixelmorph](https://github.com/mertefekurt/pixelmorph)** `Python` - None
+- **[PhotoEnchancer](https://github.com/mertefekurt/PhotoEnchancer)** `Python` - simple, open-source photo processing application. Powered by Tkinter.
 - **[Story-Generator](https://github.com/mertefekurt/Story-Generator)** `Python` - AI Powered Story Generator
-- **[Memu-AI](https://github.com/mertefekurt/Memu-AI)** `Swift` - memu, yapay zeka destekli bir sohbet uygulaması.
-- **[cron-window-audit](https://github.com/mertefekurt/cron-window-audit)** `Python` - None
-- **[cache-header-audit](https://github.com/mertefekurt/cache-header-audit)** `Python` - None
-- **[env-drift-guard](https://github.com/mertefekurt/env-drift-guard)** `Python` - None
 <!--END_SECTION:activity-->
 
 ---
