@@ -49,7 +49,7 @@ jobs:
           else:
               headers = {'Authorization': f'Bearer {token}'}
           
-          url = f'https://api.github.com/users/{username}/repos?sort=updated&per_page=6&type=all'
+          url = f'https://api.github.com/users/{username}/repos?sort=updated&per_page=12&type=owner'
           
           try:
               response = requests.get(url, headers=headers, timeout=10)
@@ -62,12 +62,19 @@ jobs:
               
               repo_list = []
               for repo in repos:
+                  if repo.get('name') == username or repo.get('fork'):
+                      continue
+
                   name = repo.get('name', '')
-                  description = repo.get('description', 'No description')
+                  description = (repo.get('description') or '').strip()
                   repo_url = repo.get('html_url', '')
                   language = repo.get('language', '')
                   language_badge = f" `{language}`" if language else ""
-                  repo_list.append(f"- **[{name}]({repo_url})**{language_badge} - {description}")
+                  description_text = f" - {description}" if description else ""
+                  repo_list.append(f"- **[{name}]({repo_url})**{language_badge}{description_text}")
+
+                  if len(repo_list) == 6:
+                      break
               
               with open('README.md', 'r', encoding='utf-8') as f:
                   content = f.read()
@@ -106,4 +113,3 @@ jobs:
           else
             echo "ℹ️ No changes to commit"
           fi
-
