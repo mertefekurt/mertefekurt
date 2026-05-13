@@ -98,12 +98,12 @@ working_style: clear docs, reproducible setup, practical automation
 ## Recent Repositories
 
 <!--START_SECTION:activity-->
+- **[cert-expiry-watch](https://github.com/mertefekurt/cert-expiry-watch)** `Python`
+- **[JavaLearn](https://github.com/mertefekurt/JavaLearn)** `Java`
+- **[JWT](https://github.com/mertefekurt/JWT)** `Python`
 - **[link-rot-scanner](https://github.com/mertefekurt/link-rot-scanner)** `Python`
 - **[Roulette-Game-CLI](https://github.com/mertefekurt/Roulette-Game-CLI)** `Python` - A simple command-line roulette game built with Python
 - **[PyUUID](https://github.com/mertefekurt/PyUUID)** `Python`
-- **[FAPI](https://github.com/mertefekurt/FAPI)** `Python`
-- **[TechnopatGrabber](https://github.com/mertefekurt/TechnopatGrabber)** `Python` - Technopat Grabber
-- **[portfolio](https://github.com/mertefekurt/portfolio)** `CSS`
 <!--END_SECTION:activity-->
 
 <div align="center">
