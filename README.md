@@ -82,6 +82,7 @@ primary_stack: Python, SQL, FastAPI, Docker, GitHub Actions
 current_focus: data quality tools, automation utilities, backend APIs
 interests: cybersecurity, observability, developer experience, analytics
 working_style: clear docs, reproducible setup, practical automation
+maintenance_focus: small scoped improvements, readable diffs, regular verification
 ```
 
 ## GitHub Overview
