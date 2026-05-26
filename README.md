@@ -99,12 +99,12 @@ maintenance_focus: small scoped improvements, readable diffs, regular verificati
 ## Recent Repositories
 
 <!--START_SECTION:activity-->
-- **[TechnopatGrabber](https://github.com/mertefekurt/TechnopatGrabber)** `Python` - Technopat Grabber
-- **[Roulette-Game-CLI](https://github.com/mertefekurt/Roulette-Game-CLI)** `Python` - A simple command-line roulette game built with Python
-- **[cert-expiry-watch](https://github.com/mertefekurt/cert-expiry-watch)** `Python`
-- **[port-map-audit](https://github.com/mertefekurt/port-map-audit)** `Python`
-- **[csv-contract-lint](https://github.com/mertefekurt/csv-contract-lint)** `Python`
 - **[pixelmorph](https://github.com/mertefekurt/pixelmorph)** `Python`
+- **[MIS029-Chocolate-Dashboard](https://github.com/mertefekurt/MIS029-Chocolate-Dashboard)** `HTML` - MIS029 Data Visualization Final Project - Chocolate Bar Ratings Analysis Dashboard
+- **[Memu-AI](https://github.com/mertefekurt/Memu-AI)** `Swift` - memu, yapay zeka destekli bir sohbet uygulaması.
+- **[Story-Generator](https://github.com/mertefekurt/Story-Generator)** `Python` - AI Powered Story Generator
+- **[cron-window-audit](https://github.com/mertefekurt/cron-window-audit)** `Python`
+- **[cache-header-audit](https://github.com/mertefekurt/cache-header-audit)** `Python`
 <!--END_SECTION:activity-->
 
 <div align="center">
