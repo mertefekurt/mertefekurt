@@ -1,0 +1,57 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mert Efe Kurt - Software Developer</title>
+  <desc id="desc">A professional developer portfolio banner for Mert Efe Kurt.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.54" stop-color="#0F1B2D"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="192" y1="84" x2="1008" y2="276" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.52" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" stroke="#FFFFFF" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+
+    <filter id="softGlow" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.22 0 0 0 0 0.74 0 0 0 0 0.97 0 0 0 0.28 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" rx="0" fill="url(#background)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+
+  <path d="M740 78L1054 78L1118 142L1118 282L804 282L740 218L740 78Z" stroke="#E5E7EB" stroke-opacity="0.08" stroke-width="2"/>
+  <path d="M792 118H1040" stroke="#38BDF8" stroke-opacity="0.2" stroke-width="2"/>
+  <path d="M792 162H1090" stroke="#818CF8" stroke-opacity="0.16" stroke-width="2"/>
+  <path d="M792 206H1018" stroke="#22C55E" stroke-opacity="0.16" stroke-width="2"/>
+  <path d="M792 250H1062" stroke="#E5E7EB" stroke-opacity="0.1" stroke-width="2"/>
+
+  <circle cx="952" cy="180" r="132" stroke="url(#accent)" stroke-opacity="0.14" stroke-width="1.5"/>
+  <circle cx="952" cy="180" r="82" stroke="#E5E7EB" stroke-opacity="0.08" stroke-width="1.5"/>
+  <path d="M106 286C238 228 338 228 466 286C594 344 704 324 836 252" stroke="url(#accent)" stroke-opacity="0.28" stroke-width="2" filter="url(#softGlow)"/>
+
+  <g opacity="0.9">
+    <rect x="104" y="94" width="54" height="54" rx="14" fill="#0B1220" stroke="#E5E7EB" stroke-opacity="0.12"/>
+    <path d="M126 126L116 116L126 106" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M136 106L146 116L136 126" stroke="#22C55E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="104" y="202" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700" letter-spacing="0">
+    Mert Efe Kurt
+  </text>
+
+  <text x="108" y="248" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500" letter-spacing="0">
+    Software Developer · Python · Automation · Data Quality · Backend
+  </text>
+
+  <rect x="106" y="276" width="412" height="3" rx="1.5" fill="url(#accent)"/>
+</svg>
