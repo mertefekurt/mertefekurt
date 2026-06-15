@@ -1,98 +1,110 @@
 <svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Mert Efe Kurt - Software Developer</title>
-  <desc id="desc">A modern GitHub profile banner for Mert Efe Kurt focused on Python, automation, data quality, and backend systems.</desc>
+  <desc id="desc">Professional GitHub profile banner for Mert Efe Kurt, focused on Python, automation, data quality, and backend systems.</desc>
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#06111F"/>
-      <stop offset="0.5" stop-color="#0B1627"/>
-      <stop offset="1" stop-color="#111827"/>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.48" stop-color="#0A1626"/>
+      <stop offset="1" stop-color="#101827"/>
     </linearGradient>
 
-    <radialGradient id="blueGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(302 86) rotate(26) scale(392 184)">
-      <stop stop-color="#38BDF8" stop-opacity="0.32"/>
+    <radialGradient id="leftGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(288 92) rotate(30) scale(420 210)">
+      <stop stop-color="#38BDF8" stop-opacity="0.28"/>
       <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="greenGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(930 294) rotate(176) scale(406 190)">
-      <stop stop-color="#22C55E" stop-opacity="0.22"/>
+    <radialGradient id="rightGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(946 240) rotate(156) scale(380 220)">
+      <stop stop-color="#22C55E" stop-opacity="0.2"/>
       <stop offset="1" stop-color="#22C55E" stop-opacity="0"/>
     </radialGradient>
 
-    <linearGradient id="accent" x1="118" y1="292" x2="630" y2="292" gradientUnits="userSpaceOnUse">
+    <linearGradient id="accent" x1="92" y1="284" x2="584" y2="284" gradientUnits="userSpaceOnUse">
       <stop stop-color="#38BDF8"/>
-      <stop offset="0.48" stop-color="#60A5FA"/>
+      <stop offset="0.5" stop-color="#60A5FA"/>
       <stop offset="1" stop-color="#22C55E"/>
     </linearGradient>
 
-    <linearGradient id="panel" x1="742" y1="58" x2="1098" y2="300" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#101B2D" stop-opacity="0.92"/>
-      <stop offset="1" stop-color="#0B1220" stop-opacity="0.86"/>
+    <linearGradient id="card" x1="696" y1="62" x2="1088" y2="302" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111C2E" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#07111F" stop-opacity="0.92"/>
     </linearGradient>
 
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" stroke="#F8FAFC" stroke-opacity="0.035" stroke-width="1"/>
+    <linearGradient id="cardEdge" x1="696" y1="62" x2="1088" y2="302" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE" stop-opacity="0.22"/>
+      <stop offset="0.52" stop-color="#60A5FA" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#22C55E" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" stroke="#F8FAFC" stroke-opacity="0.035" stroke-width="1"/>
     </pattern>
 
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
   </defs>
 
-  <rect width="1200" height="360" fill="url(#bg)"/>
-  <rect width="1200" height="360" fill="url(#blueGlow)"/>
-  <rect width="1200" height="360" fill="url(#greenGlow)"/>
+  <rect width="1200" height="360" fill="url(#background)"/>
+  <rect width="1200" height="360" fill="url(#leftGlow)"/>
+  <rect width="1200" height="360" fill="url(#rightGlow)"/>
   <rect width="1200" height="360" fill="url(#grid)"/>
 
-  <path d="M118 295C236 245 332 242 446 285C548 324 654 316 770 254C876 198 980 196 1084 238" stroke="#38BDF8" stroke-opacity="0.16" stroke-width="2"/>
-  <path d="M118 292H630" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M88 286C184 240 286 235 386 272C500 314 606 304 724 246C838 190 958 186 1108 238" stroke="#7DD3FC" stroke-opacity="0.14" stroke-width="2"/>
+  <path d="M92 284H584" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
 
-  <g transform="translate(96 76)">
-    <rect x="0" y="0" width="177" height="34" rx="17" fill="#0B1220" stroke="#E2E8F0" stroke-opacity="0.12"/>
-    <circle cx="20" cy="17" r="5" fill="#22C55E"/>
-    <text x="34" y="22" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">SOFTWARE DEVELOPER</text>
+  <g transform="translate(92 68)">
+    <rect x="0" y="0" width="198" height="36" rx="18" fill="#07111F" stroke="#E2E8F0" stroke-opacity="0.16"/>
+    <circle cx="20" cy="18" r="5.5" fill="#22C55E"/>
+    <text x="38" y="23" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="1.7">SOFTWARE DEVELOPER</text>
   </g>
 
-  <text x="96" y="174" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="800" letter-spacing="0">
+  <text x="92" y="170" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="800" letter-spacing="0">
     Mert Efe Kurt
   </text>
 
-  <text x="100" y="224" fill="#D7DEE9" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="500" letter-spacing="0">
-    Python automation | data quality | backend APIs
+  <text x="96" y="220" fill="#D7DEE9" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="500" letter-spacing="0">
+    Python automation · data quality · backend systems
   </text>
 
-  <g transform="translate(100 248)">
-    <rect x="0" y="0" width="86" height="30" rx="15" fill="#0F172A" stroke="#38BDF8" stroke-opacity="0.28"/>
-    <text x="17" y="20" fill="#E0F2FE" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Python</text>
-
-    <rect x="98" y="0" width="112" height="30" rx="15" fill="#0F172A" stroke="#60A5FA" stroke-opacity="0.25"/>
-    <text x="115" y="20" fill="#DBEAFE" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Automation</text>
-
-    <rect x="222" y="0" width="114" height="30" rx="15" fill="#0F172A" stroke="#22C55E" stroke-opacity="0.25"/>
-    <text x="238" y="20" fill="#DCFCE7" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">FastAPI</text>
+  <g transform="translate(96 246)">
+    <rect x="0" y="0" width="92" height="32" rx="16" fill="#0B1220" stroke="#38BDF8" stroke-opacity="0.34"/>
+    <text x="18" y="21" fill="#E0F2FE" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Python</text>
+    <rect x="104" y="0" width="124" height="32" rx="16" fill="#0B1220" stroke="#60A5FA" stroke-opacity="0.3"/>
+    <text x="121" y="21" fill="#DBEAFE" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">Automation</text>
+    <rect x="240" y="0" width="116" height="32" rx="16" fill="#0B1220" stroke="#22C55E" stroke-opacity="0.3"/>
+    <text x="258" y="21" fill="#DCFCE7" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">FastAPI</text>
   </g>
 
-  <g>
-    <rect x="758" y="64" width="340" height="232" rx="24" fill="#050B16" opacity="0.45"/>
-    <rect x="748" y="54" width="340" height="232" rx="24" fill="url(#panel)" stroke="#E2E8F0" stroke-opacity="0.18"/>
-    <rect x="748" y="54" width="340" height="44" rx="24" fill="#111827" fill-opacity="0.88"/>
-    <path d="M748 98H1088" stroke="#E2E8F0" stroke-opacity="0.12"/>
-    <circle cx="776" cy="77" r="5" fill="#EF4444"/>
-    <circle cx="794" cy="77" r="5" fill="#F59E0B"/>
-    <circle cx="812" cy="77" r="5" fill="#22C55E"/>
-    <text x="842" y="82" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">workflow.py</text>
+  <g filter="url(#softShadow)">
+    <rect x="686" y="58" width="414" height="244" rx="28" fill="url(#card)" stroke="url(#cardEdge)" stroke-width="1.2"/>
+    <path d="M730 246C790 196 844 194 904 238C956 276 1004 264 1060 212" stroke="#38BDF8" stroke-opacity="0.18" stroke-width="2"/>
 
-    <text x="776" y="130" fill="#38BDF8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">quality_check.run()</text>
-    <text x="776" y="160" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="14">validate data inputs</text>
-    <text x="776" y="188" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="14">profile service latency</text>
-    <text x="776" y="216" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="14">ship reliable APIs</text>
+    <text x="730" y="88" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1.3">RELIABLE TOOLING</text>
 
-    <path d="M958 148H1040" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
-    <path d="M958 178H1060" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
-    <path d="M958 208H1022" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+    <g transform="translate(726 108)">
+      <rect x="0" y="0" width="132" height="50" rx="17" fill="#0B1220" stroke="#38BDF8" stroke-opacity="0.3"/>
+      <text x="34" y="31" fill="#E0F2FE" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Build</text>
+    </g>
 
-    <circle cx="958" cy="148" r="6" fill="#38BDF8"/>
-    <circle cx="958" cy="178" r="6" fill="#60A5FA"/>
-    <circle cx="958" cy="208" r="6" fill="#22C55E"/>
+    <g transform="translate(898 108)">
+      <rect x="0" y="0" width="132" height="50" rx="17" fill="#0B1220" stroke="#60A5FA" stroke-opacity="0.3"/>
+      <text x="31" y="31" fill="#DBEAFE" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Check</text>
+    </g>
 
-    <rect x="776" y="244" width="274" height="18" rx="9" fill="#020617" stroke="#E2E8F0" stroke-opacity="0.1"/>
-    <rect x="776" y="244" width="208" height="18" rx="9" fill="url(#accent)" opacity="0.85"/>
+    <g transform="translate(812 202)">
+      <rect x="0" y="0" width="132" height="50" rx="17" fill="#0B1220" stroke="#22C55E" stroke-opacity="0.3"/>
+      <text x="49" y="31" fill="#DCFCE7" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Ship</text>
+    </g>
+
+    <path d="M858 133H898" stroke="#475569" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M963 158L920 202" stroke="#475569" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M834 202L792 158" stroke="#475569" stroke-width="2.2" stroke-linecap="round"/>
+
+    <circle cx="878" cy="133" r="5" fill="#38BDF8"/>
+    <circle cx="940" cy="182" r="5" fill="#60A5FA"/>
+    <circle cx="812" cy="182" r="5" fill="#22C55E"/>
+
+    <text x="730" y="276" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">automation -> validation -> backend</text>
   </g>
 </svg>
