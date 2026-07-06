@@ -1,29 +1,33 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Mert Efe Kurt — Software Developer" width="100%" />
+  <img src="assets/readme-cover.svg" alt="Mert Efe Kurt profile cover" width="100%" />
 </p>
 
-<p align="center">
-  <a href="https://mertefekurt.me"><img src="https://img.shields.io/badge/Portfolio-0f172a?style=flat-square&logo=firefox&logoColor=white" alt="Portfolio" /></a>
-  <a href="https://tr.linkedin.com/in/mertefekurt"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com/mertefekurt?tab=repositories"><img src="https://img.shields.io/badge/Projects-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub projects" /></a>
-</p>
+# Mert Efe Kurt
 
-Software developer and MIS student in Istanbul. I build local-first tools that make AI systems easier to evaluate, inspect, and trust.
+Software developer and MIS student in Istanbul. I like small tools that make messy engineering work easier to inspect: evaluation reports, agent traces, RAG datasets, API contracts, release notes, and the quiet checks around them.
 
-My work currently centers on **LLM evaluation**, **agent reliability**, **RAG quality**, and **Python developer tooling**—with an emphasis on deterministic checks, clear reports, and CI-friendly workflows.
+[Portfolio](https://mertefekurt.me) / [LinkedIn](https://tr.linkedin.com/in/mertefekurt) / [Projects](https://github.com/mertefekurt?tab=repositories)
 
-## Selected work
+## Current focus
 
-| Project | Purpose |
-|---|---|
-| [**eval-delta**](https://github.com/mertefekurt/eval-delta) | Finds cohort regressions hidden by aggregate LLM evaluation scores. |
-| [**agent-trace-lint**](https://github.com/mertefekurt/agent-trace-lint) | Lints agent traces for protocol errors, unsafe calls, loops, and latency issues. |
-| [**rag-citecheck**](https://github.com/mertefekurt/rag-citecheck) | Checks RAG datasets for missing citations, weak claim support, and invalid quotes. |
-| [**mcp-probe**](https://github.com/mertefekurt/mcp-probe) | Runs repeatable contract tests against stdio MCP servers. |
+- Local-first Python tooling for evaluation, reliability, and data quality
+- Deterministic checks that produce readable reports
+- Developer workflows that stay simple enough to run in CI
+- Static, fast portfolio work with careful visual details
+
+## Selected projects
+
+| Project | Notes |
+| --- | --- |
+| [eval-delta](https://github.com/mertefekurt/eval-delta) | Compares evaluation runs and surfaces regressions that averages can hide. |
+| [agent-trace-lint](https://github.com/mertefekurt/agent-trace-lint) | Checks tool-call traces for protocol, safety, loop, and latency issues. |
+| [rag-citecheck](https://github.com/mertefekurt/rag-citecheck) | Reviews citation and claim-support quality in RAG evaluation data. |
+| [mcp-probe](https://github.com/mertefekurt/mcp-probe) | Runs contract tests against stdio MCP servers. |
+| [portfolio](https://github.com/mertefekurt/portfolio) | Source for my personal site, built without a heavy frontend stack. |
 
 ## Toolkit
 
-`Python` · `FastAPI` · `SQL` · `REST APIs` · `Docker` · `GitHub Actions` · `Linux`
+`Python` `FastAPI` `SQL` `REST APIs` `Docker` `GitHub Actions` `Linux` `HTML/CSS/JS`
 
 <p align="center">
   <sub>Build small. Test the edges. Make failures easy to understand.</sub>
