@@ -1,115 +1,39 @@
-name: Update Recent Repositories
+name: Refresh profile data
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "17 3 * * 1"
   workflow_dispatch:
-    inputs:
-      trigger:
-        description: 'Manual trigger'
-        required: false
-        default: 'manual'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-data-main
+  cancel-in-progress: false
 
 jobs:
-  update-readme:
+  refresh:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
+    timeout-minutes: 10
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check out profile repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Update README with recent repositories
+      - name: Generate profile metrics
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/generate_profile_metrics.py
+
+      - name: Commit updated metrics
         run: |
-          python3 << 'EOF'
-          import os
-          import re
-          import requests
-          import sys
-          
-          token = os.environ.get('GITHUB_TOKEN')
-          username = 'mertefekurt'
-          
-          if not token:
-              print("Warning: GITHUB_TOKEN not found, using unauthenticated requests")
-              headers = {}
-          else:
-              headers = {'Authorization': f'Bearer {token}'}
-          
-          url = f'https://api.github.com/users/{username}/repos?sort=updated&per_page=12&type=owner'
-          
-          try:
-              response = requests.get(url, headers=headers, timeout=10)
-              response.raise_for_status()
-              repos = response.json()
-              
-              if not repos:
-                  print("No repositories found")
-                  sys.exit(0)
-              
-              repo_list = []
-              for repo in repos:
-                  if repo.get('name') == username or repo.get('fork'):
-                      continue
-
-                  name = repo.get('name', '')
-                  description = (repo.get('description') or '').strip()
-                  repo_url = repo.get('html_url', '')
-                  language = repo.get('language', '')
-                  language_badge = f" `{language}`" if language else ""
-                  description_text = f" - {description}" if description else ""
-                  repo_list.append(f"- **[{name}]({repo_url})**{language_badge}{description_text}")
-
-                  if len(repo_list) == 6:
-                      break
-              
-              with open('README.md', 'r', encoding='utf-8') as f:
-                  content = f.read()
-              
-              pattern = r'<!--START_SECTION:activity-->.*?<!--END_SECTION:activity-->'
-              replacement = f'<!--START_SECTION:activity-->\n' + '\n'.join(repo_list) + '\n<!--END_SECTION:activity-->'
-              
-              new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-              
-              with open('README.md', 'w', encoding='utf-8') as f:
-                  f.write(new_content)
-              
-              print(f"✅ Updated README with {len(repo_list)} repositories")
-              for repo in repo_list:
-                  print(f"  {repo}")
-          except requests.exceptions.HTTPError as e:
-              print(f"❌ HTTP Error: {e}")
-              print(f"Response: {e.response.text}")
-              sys.exit(1)
-          except Exception as e:
-              print(f"❌ Error: {e}")
-              import traceback
-              traceback.print_exc()
-              sys.exit(1)
-          EOF
-
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          if ! git diff --quiet README.md || ! git diff --cached --quiet README.md; then
-            git add README.md
-            git commit -m "chore: update recent repositories [skip ci]"
-            git push
-            echo "✅ Changes pushed successfully"
-          else
-            echo "ℹ️ No changes to commit"
+          if git diff --quiet -- assets/profile-metrics.svg assets/profile-metrics-mobile.svg; then
+            echo "Profile data is already current."
+            exit 0
           fi
+
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add assets/profile-metrics.svg assets/profile-metrics-mobile.svg
+          git commit -m "chore: refresh profile data"
+          git push

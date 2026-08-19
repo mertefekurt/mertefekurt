@@ -1,0 +1,52 @@
+<svg width="1280" height="292" viewBox="0 0 1280 292" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Verified GitHub work by Mert Efe Kurt</title>
+  <desc id="desc">Merged team pull requests, team-project commits, public repository count, and primary repository languages generated from the GitHub API.</desc>
+
+  <style>
+    .sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    @media (prefers-reduced-motion: no-preference) {
+      .metric-a { animation: metric-in .7s .1s cubic-bezier(.16,1,.3,1) both; }
+      .metric-b { animation: metric-in .7s .22s cubic-bezier(.16,1,.3,1) both; }
+      .metric-c { animation: metric-in .7s .34s cubic-bezier(.16,1,.3,1) both; }
+      .segment { animation: segment-in .9s var(--delay) cubic-bezier(.16,1,.3,1) both; transform-origin: left; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .metric-a, .metric-b, .metric-c, .segment { opacity: 1; transform: none; }
+    }
+    @keyframes metric-in {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes segment-in {
+      from { opacity: 0; transform: scaleX(0); }
+      to { opacity: 1; transform: scaleX(1); }
+    }
+  </style>
+
+  <rect width="1280" height="292" fill="#0D1014"/>
+  <path d="M426 48V177M846 48V177" stroke="#2A3038"/>
+
+  <g class="metric-a">
+    <text x="48" y="118" class="mono" fill="#F3F5F7" font-size="68" font-weight="800">5</text>
+    <text x="48" y="157" class="sans" fill="#A8B0BA" font-size="16">merged CloudSentinel PRs</text>
+  </g>
+  <g class="metric-b">
+    <text x="468" y="118" class="mono" fill="#F3F5F7" font-size="68" font-weight="800">25</text>
+    <text x="468" y="157" class="sans" fill="#A8B0BA" font-size="16">KOBİ Ops AI commits</text>
+  </g>
+  <g class="metric-c">
+    <text x="888" y="118" class="mono" fill="#F3F5F7" font-size="68" font-weight="800">144</text>
+    <text x="888" y="157" class="sans" fill="#A8B0BA" font-size="16">public repositories</text>
+  </g>
+
+  <text x="48" y="202" class="mono" fill="#737D88" font-size="12" font-weight="700" letter-spacing="1.2">PRIMARY LANGUAGE BY REPOSITORY</text>
+  <g transform="translate(48 224)"><line class="segment" style="--delay:0.54s" x1="0" y1="0" x2="1148" y2="0" stroke="#C8FF45" stroke-opacity="1" stroke-width="9"/></g>
+    <g transform="translate(1196 224)"><line class="segment" style="--delay:0.64s" x1="0" y1="0" x2="12" y2="0" stroke="#C8FF45" stroke-opacity="0.72" stroke-width="9"/></g>
+    <g transform="translate(1208 224)"><line class="segment" style="--delay:0.74s" x1="0" y1="0" x2="12" y2="0" stroke="#C8FF45" stroke-opacity="0.5" stroke-width="9"/></g>
+    <g transform="translate(1220 224)"><line class="segment" style="--delay:0.84s" x1="0" y1="0" x2="12" y2="0" stroke="#C8FF45" stroke-opacity="0.34" stroke-width="9"/></g>
+  <text x="48" y="266" class="mono" fill="#A8B0BA" font-size="14" font-weight="700">PYTHON <tspan fill="#F3F5F7">97%</tspan></text>
+  <text x="263" y="266" class="mono" fill="#A8B0BA" font-size="14" font-weight="700">HTML <tspan fill="#F3F5F7">1%</tspan></text>
+  <text x="478" y="266" class="mono" fill="#A8B0BA" font-size="14" font-weight="700">JAVA <tspan fill="#F3F5F7">1%</tspan></text>
+  <text x="693" y="266" class="mono" fill="#A8B0BA" font-size="14" font-weight="700">SWIFT <tspan fill="#F3F5F7">1%</tspan></text>
+</svg>
