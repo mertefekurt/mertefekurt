@@ -1,16 +1,16 @@
-# Profile identity assets
+# Profile design
 
-The profile uses a self-contained SVG identity: warm paper, forest green, lime accents, outlined type, and original line icons. The CloudSentinel image is the existing project screenshot, linked to the merged contribution that introduced the dashboard work.
+The current README uses a minimal, transparent typographic masthead and native Markdown. There are four selected projects, an optional workbench list, and three small contact icons. Desktop/mobile and light/dark variants keep the masthead readable without a surrounding card or background panel.
 
-## Rebuild
+## Rebuild current assets
 
-From the repository root, with Python 3 and `fonttools` installed:
+With Python 3 and `fonttools` installed, run from the repository root:
 
 ```sh
-python3 .github/design/build_identity.py
+python3 .github/design/build_minimal.py
 ```
 
-All generated files are in `assets/identity/`. Font outlines keep the typography consistent without web fonts, scripts, or external image services. The README selects separate mobile artwork and light/dark section headings through `<picture>`. Text descriptions and project links remain ordinary Markdown.
+Output: `assets/minimal/`. Type is outlined, so the README needs no remote fonts or image services. Project descriptions remain editable in `README.md`.
 
 ## Fonts
 
@@ -18,8 +18,6 @@ All generated files are in `assets/identity/`. Font outlines keep the typography
 - Instrument Serif Italic — https://github.com/google/fonts/tree/main/ofl/instrumentserif
 - IBM Plex Mono — https://github.com/google/fonts/tree/main/ofl/ibmplexmono
 
-The source fonts and their SIL Open Font License notices are included in `fonts/`.
+Source fonts and their SIL Open Font License notices are in `fonts/`.
 
-## Maintenance
-
-Edit project descriptions in `README.md`; edit the visual system in `build_identity.py` and rebuild. The existing metrics workflow updates only the legacy metrics assets and does not overwrite this identity or README.
+The previous visual system is preserved in `build_identity.py` and `assets/identity/` for reference. Neither generator runs automatically. The existing metrics workflow does not overwrite the README or its current visual assets.
