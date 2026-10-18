@@ -1,13 +1,13 @@
 <picture>
-  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/minimal/header-mobile-dark.svg" />
-  <source media="(max-width: 640px)" srcset="assets/minimal/header-mobile-light.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="assets/minimal/header-dark.svg" />
-  <img src="assets/minimal/header-light.svg" width="100%" alt="Mert Efe Kurt — software developer. Istanbul, Türkiye." />
+  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/editorial/cover-mobile-dark.svg" />
+  <source media="(max-width: 640px)" srcset="assets/editorial/cover-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/cover-dark.svg" />
+  <img src="assets/editorial/cover-light.svg" width="100%" alt="Mert Efe Kurt — software developer in Istanbul. An engraved K built from flowing parallel lines, inspired by my pixel-sorting project, PixelMorph." />
 </picture>
 
 <br />
 
-I work mostly in Python, from APIs to the tools that test them. I’m studying Management Information Systems in Istanbul.
+I’m a developer and Management Information Systems student in Istanbul. I build Python backends and testing tools, with the occasional experiment in image processing.
 
 <p>
   <a href="https://mertefekurt.me"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/minimal/website-dark.svg" /><img src="assets/minimal/website-light.svg" width="16" height="16" alt="" /></picture> Website</a>
@@ -50,3 +50,5 @@ A small PyQt app that turns images into pixel-sorting experiments.
 ---
 
 <sub>For projects, internships, or a conversation: [mertk.mek@gmail.com](mailto:mertk.mek@gmail.com)</sub>
+
+<sub>Cover study — *K, in lines.* Inspired by [PixelMorph](https://github.com/mertefekurt/pixelmorph).</sub>

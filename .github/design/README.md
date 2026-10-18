@@ -1,16 +1,18 @@
 # Profile design
 
-The current README uses a minimal, transparent typographic masthead and native Markdown. There are four selected projects, an optional workbench list, and three small contact icons. Desktop/mobile and light/dark variants keep the masthead readable without a surrounding card or background panel.
+The current README pairs a typographic masthead with an original engraved K. Its displaced-to-ordered line field takes its subject from PixelMorph rather than generic decorative artwork. Large sans type, an italic surname, and one warm registration line create an asymmetric composition; ordinary Markdown keeps the project list useful.
+
+There are separate desktop/mobile compositions and light/dark variants, without background panels or remote rendering services. Four projects are visible; the workbench is expandable. Contact icons come from the earlier minimal system.
 
 ## Rebuild current assets
 
 With Python 3 and `fonttools` installed, run from the repository root:
 
 ```sh
-python3 .github/design/build_minimal.py
+python3 .github/design/build_editorial.py
 ```
 
-Output: `assets/minimal/`. Type is outlined, so the README needs no remote fonts or image services. Project descriptions remain editable in `README.md`.
+Output: `assets/editorial/`. Type is outlined. The engraved K uses vector clipping and explicit polylines; it has no embedded raster textures, scripts, or animation. Project descriptions remain editable in `README.md`.
 
 ## Fonts
 
@@ -20,4 +22,4 @@ Output: `assets/minimal/`. Type is outlined, so the README needs no remote fonts
 
 Source fonts and their SIL Open Font License notices are in `fonts/`.
 
-The previous visual system is preserved in `build_identity.py` and `assets/identity/` for reference. Neither generator runs automatically. The existing metrics workflow does not overwrite the README or its current visual assets.
+Previous systems are preserved in `build_identity.py`, `build_minimal.py`, `assets/identity/`, and `assets/minimal/`. Generators run manually. The existing metrics workflow does not overwrite the README or current artwork.
