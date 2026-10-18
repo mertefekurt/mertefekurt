@@ -1,72 +1,91 @@
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/profile-hero-mobile.svg" />
-  <img src="./assets/profile-hero.svg" width="100%" alt="Mert Efe Kurt, software developer and Management Information Systems student" />
+  <source media="(max-width: 640px)" srcset="assets/identity/hero-mobile.svg" />
+  <img src="assets/identity/hero.svg" width="100%" alt="Mert Efe Kurt — software developer and Management Information Systems student in Istanbul. Python backends, developer tools and interfaces." />
 </picture>
 
-# Mert Efe Kurt
+<br />
 
-Software developer and Management Information Systems student in Istanbul. I build Python tools that make AI workflows easier to test: paired evaluation comparisons, agent trace linting, RAG citation checks, MCP contract tests, and reproducible API replay.
+I’m Mert, a software developer and Management Information Systems student in Istanbul. Most of my work starts in Python: APIs, command-line tools, and tests for the parts of a system that are easy to get wrong.
 
-In team projects, I work across FastAPI backends, human-in-the-loop decision systems, Gemini integrations, and read-only data tooling.
+I also work on the interface side. In team projects, that has meant building a cloud-cost dashboard and connecting an AI assistant to a database with read-only access. A few examples are below, with links to the code and my contributions.
 
-[Portfolio](https://mertefekurt.me) / [LinkedIn](https://linkedin.com/in/mertefekurt) / [Email](mailto:mertk.mek@gmail.com) / [All repositories](https://github.com/mertefekurt?tab=repositories)
+<p>
+  <a href="https://mertefekurt.me"><img src="assets/identity/portfolio.svg" height="36" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/mertefekurt/"><img src="assets/identity/linkedin.svg" height="36" alt="LinkedIn" /></a>
+  <a href="mailto:mertk.mek@gmail.com"><img src="assets/identity/email.svg" height="36" alt="Email" /></a>
+  <a href="https://github.com/mertefekurt?tab=repositories"><img src="assets/identity/repositories.svg" height="36" alt="All repositories" /></a>
+</p>
 
-## GitHub, in numbers
+<br />
 
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/profile-metrics-mobile.svg" />
-  <img src="./assets/profile-metrics.svg" width="100%" alt="Verified GitHub work metrics: merged team pull requests, team project commits, public repositories, and primary repository languages" />
+  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/identity/team-mobile-dark.svg" />
+  <source media="(max-width: 640px)" srcset="assets/identity/team-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/identity/team-dark.svg" />
+  <img src="assets/identity/team-light.svg" width="100%" alt="01 — Built together. Team projects." />
 </picture>
 
-<sub>Generated weekly from the GitHub API. Forked and archived repositories are excluded from the language mix.</sub>
+### [CloudSentinel ↗](https://github.com/muratcan-ates/cloudsentinel)
 
-## Team work
+Cloud-cost monitoring with a dashboard for reviewing signals and approving actions. Built with **YZTA Bootcamp · AI Track · Group 60**.
 
-### [CloudSentinel](https://github.com/muratcan-ates/cloudsentinel)
-
-Developer in YZTA Bootcamp 2026 AI Track Group 60. I contributed five merged pull requests spanning the cost summary API, interactive dashboard and themes, CI fixes, bilingual documentation, market analysis, and UI consistency.
-
-[Cost API, PR #1](https://github.com/muratcan-ates/cloudsentinel/pull/1) / [Dashboard, PR #4](https://github.com/muratcan-ates/cloudsentinel/pull/4) / [CI and docs, PR #5](https://github.com/muratcan-ates/cloudsentinel/pull/5) / [Market watch, PR #6](https://github.com/muratcan-ates/cloudsentinel/pull/6) / [UI consistency, PR #8](https://github.com/muratcan-ates/cloudsentinel/pull/8)
+My contributions cover the cost-summary API, interactive dashboard, theme switching, and CI fixes. The dashboard work includes service filtering, ledger sorting, and a fix for the API documentation’s content security policy.
 
 <a href="https://github.com/muratcan-ates/cloudsentinel/pull/4">
-  <img src="./assets/cloudsentinel-proof.jpg" width="100%" alt="CloudSentinel night-mode dashboard from merged pull request 4" />
+  <img src="assets/cloudsentinel-proof.jpg" width="100%" alt="CloudSentinel dashboard in night mode: cloud spend, open signals, approval queue, and sensitivity controls. Preview uses mock data." />
 </a>
 
-<sub>CloudSentinel night-mode dashboard, introduced in merged PR #4.</sub>
+<sub>Night-mode dashboard from my merged contribution. The preview uses mock data.</sub>
 
-### [KOBİ Ops AI](https://github.com/emirselengil/YZTA-AI-Hackathon-Team215)
+[Dashboard & themes, PR #4](https://github.com/muratcan-ates/cloudsentinel/pull/4) · [Cost API, PR #1](https://github.com/muratcan-ates/cloudsentinel/pull/1) · [CI & documentation, PR #5](https://github.com/muratcan-ates/cloudsentinel/pull/5)
 
-YZTA AI Hackathon Team 215 project. Across 25 commits, I built the Gemini backend layer, read-only SQLite MCP tools, model failover and quota backoff, diagnostics, tool orchestration, and query guardrail tests. The merged backend PR changed 13 files with 615 additions.
+### [KOBİ Ops AI ↗](https://github.com/emirselengil/YZTA-AI-Hackathon-Team215)
 
-[Inspect merged PR #1](https://github.com/emirselengil/YZTA-AI-Hackathon-Team215/pull/1)
+An operations assistant built for the **YZTA AI Hackathon · Team 215**.
 
-## Independent tools
+I worked on the Gemini backend and MCP integration: SQLite tools for inspecting tables and running read-only queries, quota handling with retries and fallback responses, and tests for the database access rules.
 
-### Evaluation and traces
+[Backend contribution, merged PR #1 →](https://github.com/emirselengil/YZTA-AI-Hackathon-Team215/pull/1)
 
-**[eval-delta](https://github.com/mertefekurt/eval-delta)** compares paired evaluation runs by case and metadata slice, then produces seeded bootstrap confidence intervals plus terminal, JSON, and Markdown reports with CI-ready exit codes.
-
-**[agent-trace-lint](https://github.com/mertefekurt/agent-trace-lint)** checks agent tool-call traces for protocol errors, invalid arguments, exposed secrets, risky shell operations, loops, and latency. Reports are available as text, JSON, or SARIF.
-
-**[rag-citecheck](https://github.com/mertefekurt/rag-citecheck)** checks RAG evaluation records for missing citations, unknown sources, token overlap, and absent quoted evidence. It also emits terminal, JSON, or SARIF output.
-
-### Protocols and test infrastructure
-
-**[mcp-probe](https://github.com/mertefekurt/mcp-probe)** runs stdio MCP contract scenarios across schema discovery, tool calls, assertions, and latency, with JSON and JUnit reports for CI.
-
-**[llm-replay-proxy](https://github.com/mertefekurt/llm-replay-proxy)** is a FastAPI proxy for recording and replaying non-streaming OpenAI-compatible POST calls with local JSON cassettes.
-
-### Data visualization
-
-**[Chocolate Ratings Dashboard](https://github.com/mertefekurt/MIS029-Chocolate-Dashboard)** explores 2,530 chocolate reviews in an R flexdashboard using ggplot2, Plotly, and DT, published with GitHub Pages.
-
-## Toolchain
+<br />
 
 <picture>
-  <source media="(max-width: 640px)" srcset="./assets/toolchain-mobile.svg" />
-  <img src="./assets/toolchain.svg" width="100%" alt="Python, FastAPI, Pydantic, JavaScript, pytest, Ruff, GitHub Actions, SQLite, Gemini, MCP, R, and Swift" />
+  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/identity/tools-mobile-dark.svg" />
+  <source media="(max-width: 640px)" srcset="assets/identity/tools-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/identity/tools-dark.svg" />
+  <img src="assets/identity/tools-light.svg" width="100%" alt="02 — Small tools, specific jobs. Selected repositories." />
 </picture>
 
-## Contact
+| Project | What it does |
+| :--- | :--- |
+| **[eval-delta](https://github.com/mertefekurt/eval-delta)** | Compares paired evaluation runs and flags regressions, including changes hidden within metadata slices. Produces confidence intervals and reports for CI. |
+| **[agent-trace-lint](https://github.com/mertefekurt/agent-trace-lint)** | Checks recorded agent tool calls for protocol errors, exposed secrets, loops, and latency problems. Runs offline. |
+| **[mcp-probe](https://github.com/mertefekurt/mcp-probe)** | Tests stdio MCP servers against contract scenarios: schemas, tool calls, assertions, and latency. Exports JSON and JUnit reports. |
+| **[llm-replay-proxy](https://github.com/mertefekurt/llm-replay-proxy)** | Records and replays non-streaming, OpenAI-compatible API calls with local JSON cassettes for repeatable integration tests. |
+| **[PixelMorph](https://github.com/mertefekurt/pixelmorph)** | A PyQt image-processing app for sorting pixels vertically, horizontally, or by brightness. |
+| **[Chocolate Ratings Dashboard](https://github.com/mertefekurt/MIS029-Chocolate-Dashboard)** | An R flexdashboard exploring chocolate ratings with ggplot2, Plotly, and interactive tables. [Open dashboard ↗](https://mertefekurt.github.io/MIS029-Chocolate-Dashboard/) |
 
-For project, internship, or collaboration conversations, email [mertk.mek@gmail.com](mailto:mertk.mek@gmail.com) or visit [mertefekurt.me](https://mertefekurt.me).
+<br />
+
+<picture>
+  <source media="(max-width: 640px) and (prefers-color-scheme: dark)" srcset="assets/identity/stack-mobile-dark.svg" />
+  <source media="(max-width: 640px)" srcset="assets/identity/stack-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/identity/stack-dark.svg" />
+  <img src="assets/identity/stack-light.svg" width="100%" alt="03 — The working set. Languages and tools." />
+</picture>
+
+<picture>
+  <source media="(max-width: 640px)" srcset="assets/identity/stack-mobile.svg" />
+  <img src="assets/identity/stack.svg" width="100%" alt="Python, FastAPI, Pydantic, JavaScript, SQLite, Git, pytest, Ruff, GitHub Actions, MCP, R and Plotly, Swift." />
+</picture>
+
+<br />
+
+For project, internship, or collaboration conversations, you can reach me by email.
+
+<a href="mailto:mertk.mek@gmail.com">
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/identity/contact-mobile.svg" />
+    <img src="assets/identity/contact.svg" width="100%" alt="Have a project in mind? Email mertk.mek@gmail.com." />
+  </picture>
+</a>
